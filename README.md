@@ -1,15 +1,15 @@
 # 🕸🕷FYCrawler🦟🕸
 
-[![GitHub stars](https://img.shields.io/github/stars/fatihyildizli/spiderfy.svg)](https://github.com/fatihyildizli/spiderfy/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/fatihyildizli/spiderfy.svg)](https://github.com/fatihyildizli/spiderfy/network/members)
-![Commits](https://badgen.net/github/commits/fatihyildizli/spiderfy/master)
-![Last Commit](https://badgen.net/github/last-commit/fatihyildizli/spiderfy/master)
-![License](https://img.shields.io/github/license/fatihyildizli/spiderfy)
-![Code size](https://img.shields.io/github/repo-size/fatihyildizli/spiderfy)
-![Top Language](https://img.shields.io/github/languages/top/fatihyildizli/spiderfy)
-![Languages](https://img.shields.io/github/languages/count/fatihyildizli/spiderfy)
-![Views](https://img.shields.io/github/search/fatihyildizli/spiderfy/spiderfy)
-![Open Pull Requests](https://badgen.net/github/open-prs/fatihyildizli/spiderfy)
+[![GitHub stars](https://img.shields.io/github/stars/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/network/members)
+![Commits](https://badgen.net/github/commits/fatihyildizli/FYCrawler/master)
+![Last Commit](https://badgen.net/github/last-commit/fatihyildizli/FYCrawler/master)
+![License](https://img.shields.io/github/license/fatihyildizli/)
+![Code size](https://img.shields.io/github/repo-size/fatihyildizli/FYCrawler)
+![Top Language](https://img.shields.io/github/languages/top/fatihyildizli/FYCrawler)
+![Languages](https://img.shields.io/github/languages/count/fatihyildizli/FYCrawler)
+![Views](https://img.shields.io/github/search/fatihyildizli/FYCrawler/FYCrawler)
+![Open Pull Requests](https://badgen.net/github/open-prs/fatihyildizli/FYCrawler)
 
 
 
