@@ -14,10 +14,10 @@
 
 
 #                             TECH STACK
-![techstack](https://raw.githubusercontent.com/fatihyildizli/spiderfy/master/techStack.PNG)
+![techstack](tech.PNG)
 
 #                             SYSTEM DIAGRAM
-![systemdiagram](https://raw.githubusercontent.com/fatihyildizli/spiderfy/master/diagram.png)
+![systemdiagram](diagram.png)
 
 **All frameworks and libraries are %100 open source ❤️.**
 |Feature Count| Methodology| Description  |
