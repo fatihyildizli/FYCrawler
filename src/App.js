@@ -30,7 +30,7 @@ class App extends Component {
       data: [],
       error: false,
       results: [],
-      actionType: "",
+      actionType: "crawl/",
       loader: false,
       selectedAct: "",
       elapsedTimeVisiblity: false,
@@ -352,7 +352,9 @@ class App extends Component {
               <TextInput
                 id="query"
                 labelText="Select an action and Type a website."
+                invalidText="Please select an action on header bar and type a website.."
                 placeholder="Type a website."
+                invalid={(this.state.actionType===""  || this.state.query==="")  ? true : false}
                 onChange={(event) => this.onChangeQuery(event)}
               />
               {loader && (
