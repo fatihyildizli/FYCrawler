@@ -6,7 +6,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/network/members)
 ![Commits](https://badgen.net/github/commits/fatihyildizli/FYCrawler/master)
 ![Last Commit](https://badgen.net/github/last-commit/fatihyildizli/FYCrawler/master)
-![License](https://img.shields.io/github/license/fatihyildizli/)
+![License](https://img.shields.io/github/license/fatihyildizli/FYCrawler)
 ![Code size](https://img.shields.io/github/repo-size/fatihyildizli/FYCrawler)
 ![Top Language](https://img.shields.io/github/languages/top/fatihyildizli/FYCrawler)
 ![Languages](https://img.shields.io/github/languages/count/fatihyildizli/FYCrawler)
