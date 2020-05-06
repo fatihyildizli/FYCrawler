@@ -13,7 +13,7 @@
 ![Views](https://img.shields.io/github/search/fatihyildizli/FYCrawler/FYCrawler)
 ![Open Pull Requests](https://badgen.net/github/open-prs/fatihyildizli/FYCrawler)
 
-
+![](info.gif)
 
 #                             TECH STACK
 ![techstack](tech.PNG)
