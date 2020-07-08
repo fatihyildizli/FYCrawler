@@ -2,7 +2,10 @@
 
 #        Access on:           https://fycrawler.herokuapp.com/ 
 
-#        Backend Full API Documentation Swagger Access on:  https://spiderfy.herokuapp.com/swagger-ui.html 
+#        Backend Full API Documentation Swagger Access on: https://spiderfy.herokuapp.com/swagger-ui.html 
+-  ( Backend Side is private Repository 😉 ) If you want to use, You will be able to use all methods according to  SwaggerUI. 
+
+⚠️ No data is stored. 
 
 [![GitHub stars](https://img.shields.io/github/stars/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/network/members)
