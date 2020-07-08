@@ -2,6 +2,8 @@
 
 #        Access on:           https://fycrawler.herokuapp.com/ 
 
+#        Backend Full API Documentation Swagger Access on:  https://spiderfy.herokuapp.com/swagger-ui.html 
+
 [![GitHub stars](https://img.shields.io/github/stars/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/network/members)
 ![Commits](https://badgen.net/github/commits/fatihyildizli/FYCrawler/master)
@@ -13,7 +15,16 @@
 ![Views](https://img.shields.io/github/search/fatihyildizli/FYCrawler/FYCrawler)
 ![Open Pull Requests](https://badgen.net/github/open-prs/fatihyildizli/FYCrawler)
 
+
+
+
 ![](info.gif)
+
+
+#              API METHOD LIST
+
+
+![methodlist](APIMethods.png)
 
 #                             TECH STACK
 ![techstack](tech.PNG)
