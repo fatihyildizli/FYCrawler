@@ -26,7 +26,7 @@
 
 
 
-![](info.gif)
+![](sample.gif)
 
 **All frameworks and libraries are %100 open source ❤️.**
 |Feature Count| Methodology| Description  |
