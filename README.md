@@ -4,9 +4,10 @@
 
 ( Backend Side is private Repository 😉 ) , If you want to use backend as a docker image, you will be able to run as a container  with this  image.
 
+[![DockerImage](https://d1q6f0aelx0por.cloudfront.net/product-logos/644d2f15-c5db-4731-a353-ace6235841fa-registry.png)](https://hub.docker.com/repository/docker/fatihyildizli/spiderfy)
 ![Docker Pulls](https://img.shields.io/docker/pulls/fatihyildizli/spiderfy?style=plastic)
 ![Docker Image Size](https://img.shields.io/docker/image-size/fatihyildizli/spiderfy?sort=date)
-[![DockerImage](https://d1q6f0aelx0por.cloudfront.net/product-logos/644d2f15-c5db-4731-a353-ace6235841fa-registry.png)](https://hub.docker.com/repository/docker/fatihyildizli/spiderfy)
+
 
 #        Backend Full API Documentation Swagger Access on: https://spiderfy.herokuapp.com/swagger-ui.html 
 
