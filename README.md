@@ -37,8 +37,6 @@
 #                             TECH STACK
 ![techstack](tech.PNG)
 
-#                             SYSTEM DIAGRAM
-![systemdiagram](diagram.png)
 
 **All frameworks and libraries are %100 open source ❤️.**
 |Feature Count| Methodology| Description  |
