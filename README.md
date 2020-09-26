@@ -2,10 +2,14 @@
 
 #        Access on:           https://fycrawler.herokuapp.com/ 
 
-#        Backend Full API Documentation Swagger Access on: https://spiderfy.herokuapp.com/swagger-ui.html 
--  ( Backend Side is private Repository 😉 ) If you want to use, You will be able to use all methods according to  SwaggerUI. 
+( Backend Side is private Repository 😉 ) , If you want to use backend as a docker image, you will be able to run as a container  with this  image.
 
-⚠️ No data is stored. 
+![Docker Pulls](https://img.shields.io/docker/pulls/fatihyildizli/spiderfy?style=plastic)
+![Docker Image Size](https://img.shields.io/docker/image-size/fatihyildizli/spiderfy?sort=date)
+[![DockerImage](https://cdn.iconscout.com/icon/free/png-256/docker-1-282655.png)](https://hub.docker.com/repository/docker/fatihyildizli/spiderfy)
+
+#        Backend Full API Documentation Swagger Access on: https://spiderfy.herokuapp.com/swagger-ui.html 
+
 
 [![GitHub stars](https://img.shields.io/github/stars/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/fatihyildizli/FYCrawler.svg)](https://github.com/fatihyildizli/FYCrawler/network/members)
@@ -67,5 +71,5 @@
 
 
 
-
+⚠️ No data is stored. 
 
