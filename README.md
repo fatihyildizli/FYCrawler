@@ -28,16 +28,6 @@
 
 ![](info.gif)
 
-
-#              API METHOD LIST
-
-
-![methodlist](APIMethods.png)
-
-#                             TECH STACK
-![techstack](tech.PNG)
-
-
 **All frameworks and libraries are %100 open source ❤️.**
 |Feature Count| Methodology| Description  |
 :---------| :------- | :---------------
