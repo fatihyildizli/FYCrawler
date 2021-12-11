@@ -10,6 +10,7 @@ import {
   HeaderMenuItem,
 } from "carbon-components-react/lib/components/UIShell";
 import {
+  TextArea,
   TextInput,
   DangerButton,
   Tag,
@@ -21,6 +22,9 @@ import {
   InlineLoading,
 } from "carbon-components-react";
 import FadeIn from "react-fade-in";
+import ReactJson from 'react-json-view'
+
+
 
 class App extends Component {
   constructor(props) {
@@ -42,6 +46,8 @@ class App extends Component {
     this.handleSpecificKeywordFreqSubmit = this.handleSpecificKeywordFreqSubmit.bind(
       this
     );
+    this.handleStructuredDataFromURL = this.handleStructuredDataFromURL.bind(this);
+    this.handleStructuredDataFromHTML = this.handleStructuredDataFromHTML.bind(this);
   }
 
   onChangeQuery = async (e) => {
@@ -133,6 +139,50 @@ class App extends Component {
         this.setState({
           data: data,
           results: [],
+          loader: false,
+          elapsedTimeVisiblity: true,
+        });
+        console.log("data", data);
+      })
+      .catch((err) => {
+        this.setState({ error: true });
+      });
+  };
+
+  handleStructuredDataFromURL = () => {
+    this.setState({ loader: true });
+  console.log( `https://structured-data-web.herokuapp.com${this.state.actionType}?url=${this.state.query}`);
+    axios
+      .get(
+        `https://structured-data-web.herokuapp.com${this.state.actionType}?url=${this.state.query}`
+      )
+      .then((res) => {
+        const data = res.data;
+        this.setState({
+          data,
+          results: res.data,
+          loader: false,
+          elapsedTimeVisiblity: true,
+        });
+        console.log("data", data);
+      })
+      .catch((err) => {
+        this.setState({ error: true });
+      });
+  };
+
+
+  handleStructuredDataFromHTML = () => {
+    this.setState({ loader: true });
+    axios
+      .post(
+        `https://structured-data-web.herokuapp.com${this.state.actionType}`,{ html:this.state.query}
+      )
+      .then((res) => {
+        const data = res.data;
+        this.setState({
+          data,
+          results: res.data,
           loader: false,
           elapsedTimeVisiblity: true,
         });
@@ -342,6 +392,169 @@ class App extends Component {
                 Specific Word Frequency
               </HeaderMenuItem>
             </HeaderMenu>
+            <HeaderMenu aria-label="🗃Structured Data" menuLinkName="🗃 Structured Data">
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/url/schemaorg/all/summary",
+                    selectedAct: "All Structured Data From URL",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                🌐
+                </span>{" "}
+                All From URL 
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/url/schemaorg/jsonld/summary",
+                    selectedAct: "JsonLd Structured Data From URL",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                🌐
+                </span>{" "}
+                JsonLd From URL 
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/url/schemaorg/meta/summary",
+                    selectedAct: "Metatags From URL",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                🌐
+                </span>{" "}
+                Metatags From URL 
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/url/schemaorg/microdata/summary",
+                    selectedAct: "Microdata Structured Data From URL",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                🌐
+                </span>{" "}
+                Microdata From URL 
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/url/schemaorg/rdfa/summary",
+                    selectedAct: "RDFa Structured Data From URL",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                🌐
+                </span>{" "}
+                RDFa From URL 
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/html/schemaorg/all/summary",
+                    selectedAct: "All Structured Data From HTML",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                📄
+                </span>{" "}
+                All From HTML
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/html/schemaorg/jsonld/summary",
+                    selectedAct: "JsonLd Structured Data From HTML",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                📄
+                </span>{" "}
+                JsonLd From HTML
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/html/schemaorg/meta/summary",
+                    selectedAct: "Meta Data From HTML",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                📄
+                </span>{" "}
+                Metatags From HTML
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/html/schemaorg/microdata/summary",
+                    selectedAct: "Microdata Structured Data From HTML",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                📄
+                </span>{" "}
+                Microdata From HTML
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/html/schemaorg/rdfa/summary",
+                    selectedAct: "RDFa Structured Data From HTML",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                📄
+                </span>{" "}
+                RDFa From HTML
+              </HeaderMenuItem>
+            </HeaderMenu>
+
           </HeaderNavigation>
         </Header>
 
@@ -349,14 +562,6 @@ class App extends Component {
           <div className="bx--row">
             <div class="bx--col"></div>
             <div class="bx--col-md-4">
-              <TextInput
-                id="query"
-                labelText="Select an action and Type a website."
-                invalidText="Please select an action on header bar and type a website.."
-                placeholder="Type a website."
-                invalid={(this.state.actionType===""  || this.state.query==="")  ? true : false}
-                onChange={(event) => this.onChangeQuery(event)}
-              />
               {loader && (
                 <div>
                   <InlineLoading
@@ -367,6 +572,16 @@ class App extends Component {
                   <img src={spider} width={100} />
                 </div>
               )}
+              {!this.state.actionType.includes("schemaorg") && (
+                <div>
+                <TextInput
+                id="query"
+                labelText="Select an action and Type a website."
+                invalidText="Please select an action on header bar and type a website.."
+                placeholder="Type a website."
+                invalid={(this.state.actionType===""  || this.state.query==="")  ? true : false}
+                onChange={(event) => this.onChangeQuery(event)}
+              />
               <DangerButton
                 onClick={() =>
                   actionType.toLowerCase().match("html")
@@ -380,6 +595,51 @@ class App extends Component {
               >
                 Execute
               </DangerButton>
+              </div>
+              ) }
+
+            {this.state.actionType.includes("url/schemaorg") && (
+                <div>
+                <TextInput
+                id="query"
+                labelText="Select an action and Type a website."
+                invalidText="Please select an action on header bar and type a website.."
+                placeholder="Type a website."
+                invalid={(this.state.actionType===""  || this.state.query==="")  ? true : false}
+                onChange={(event) => this.onChangeQuery(event)}
+              />
+              <DangerButton
+                onClick={() =>
+                 this.handleStructuredDataFromURL()
+                }
+                style={{ float: "right", backgroundColor: "black" }}
+              >
+                Execute
+              </DangerButton>
+              </div>
+              ) }
+
+            {this.state.actionType.includes("html/schemaorg") && (
+                <div>
+                <TextArea
+                id="query"
+                labelText="Paste Json escaped parsed RAW HTML Ref:(https://www.freeformatter.com/json-escape.html#ad-output)"
+                invalidText="Please copy raw HTML"
+                placeholder="Copy raw HTML"
+                invalid={(this.state.actionType===""  || this.state.query==="")  ? true : false}
+                onChange={(event) => this.onChangeQuery(event)}
+              />
+              <DangerButton
+                onClick={() =>
+                 this.handleStructuredDataFromHTML()
+                }
+                style={{ float: "right", backgroundColor: "black" }}
+              >
+                Execute
+              </DangerButton>
+              </div>
+              ) } 
+            
             </div>
             <div class="bx--col">
               <br />
@@ -461,8 +721,8 @@ class App extends Component {
               </StructuredListBody>
             </StructuredListWrapper>
           </FadeIn>
-        )}
 
+        )}
         {results.length > 0 && actionType === "crawl/internalbacklinks/" && (
           <FadeIn>
             <StructuredListWrapper selection ariaLabel="Structured list">
@@ -678,6 +938,14 @@ class App extends Component {
               </StructuredListWrapper>
             </FadeIn>
           )}
+
+
+{Object.keys(data).length !== 0 &&
+          actionType.includes("schemaorg") && (
+<ReactJson src={data} />
+            )}
+
+
       </div>
     );
   }
