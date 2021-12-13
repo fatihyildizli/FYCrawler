@@ -476,6 +476,22 @@ class App extends Component {
               <HeaderMenuItem
                 onClick={() =>
                   this.setState({
+                    actionType: "/url/schemaorg/opengraph/summary",
+                    selectedAct: "Opengraph Structured Data From URL",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                🌐
+                </span>{" "}
+                Opengraph From URL 
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
                     actionType: "/html/schemaorg/all/summary",
                     selectedAct: "All Structured Data From HTML",
                     results: [],
@@ -552,6 +568,22 @@ class App extends Component {
                 📄
                 </span>{" "}
                 RDFa From HTML
+              </HeaderMenuItem>
+              <HeaderMenuItem
+                onClick={() =>
+                  this.setState({
+                    actionType: "/html/schemaorg/opengraph/summary",
+                    selectedAct: "Opengraph Structured Data From HTML",
+                    results: [],
+                    data: [],
+                    elapsedTimeVisiblity: false,
+                  })
+                }
+              >
+                <span role="img" aria-label="icon">
+                📄
+                </span>{" "}
+                Opengraph From HTML
               </HeaderMenuItem>
             </HeaderMenu>
 
